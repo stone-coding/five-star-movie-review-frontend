@@ -1,0 +1,155 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.bounce-custom {
+  animation: bounce-custom 0.5s;
+}
+@keyframes bounce-custom {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease;
+}
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scale {
+  transform-origin: 0% 0%;
+  animation: scale 0.2s;
+}
+
+.animate-scale-reverse {
+  transform-origin: 0% 0%;
+  animation: scale 0.2s reverse forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* Width */
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+.custom-scroll-bar::-webkit-scrollbar-track {
+  background: #232222;
+}
+
+/* Handle */
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background: #b0a2f8;
+}
+
+/* Handle on hover */
+.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: #dd72db;
+}
+
+/* for our slide show */
+.slide-in-from-right {
+  animation: slideInFromRight 0.5s ease-in;
+}
+
+/* for our slide show */
+.slide-out-to-left {
+  animation: slideOutToLeft 0.5s ease-in;
+}
+
+/* for our slide show */
+.slide-in-from-left {
+  animation: slideInFromLeft 0.5s ease-in;
+}
+
+/* for our slide show */
+.slide-out-to-right {
+  animation: slideOutToRight 0.5s ease-in;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
