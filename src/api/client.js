@@ -1,5 +1,8 @@
 import axios from "axios";
 
-const client = axios.create({ baseURL:"http://localhost:8000/api"})
+// https://fivestarback-rdyov.ondigitalocean.app/api/movie/top-rated
+const client = axios.create({
+  baseURL: "https://fivestarback-rdyov.ondigitalocean.app/api",
+});
 
-export default client
+export default client;
