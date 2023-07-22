@@ -36,11 +36,11 @@ export default function Signup() {
     password: "",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const {updateNotification} = useNotification()
-  const { handleLogin, authInfo} = useAuth();
-  const { isPending, isLoggedIn} = authInfo
+  const { updateNotification } = useNotification();
+  const { handleLogin, authInfo } = useAuth();
+  const { isPending, isLoggedIn } = authInfo;
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
@@ -64,12 +64,11 @@ export default function Signup() {
       state: { user: response.user },
       replace: true,
     });
-    
   };
 
-  useEffect(()=> {
-    if(isLoggedIn) navigate("/") // we want to move our user to somewhere else
-  }, [isLoggedIn])
+  useEffect(() => {
+    if (isLoggedIn) navigate("/"); // we want to move our user to somewhere else
+  }, [isLoggedIn]);
 
   //user info with name email password
   const { name, email, password } = userInfo;

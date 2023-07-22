@@ -191,12 +191,11 @@ const Slide = forwardRef((props, ref) => {
     <Link
       to={"/movie/" + id}
       ref={ref}
-      className={"w-full cursor-pointer block " + className}
+      className={"w-full cursor-pointer block" + className}
       {...rest}
     >
       {src ? (
         <img
-          //   onAnimationEnd={handleAnimationEnd}
           className="aspect-video object-cover"
           src={src}
           alt=""
